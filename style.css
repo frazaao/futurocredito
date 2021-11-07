@@ -1,0 +1,313 @@
+:root{
+    --primary-color:#00D290;
+    --secondary-color:#00B9B1;
+    --light-text:#eee;
+    --dark-text:#333;
+    --primary-font: 'Ubuntu', Arial, Helvetica, sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+#header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:100px;
+    background: linear-gradient(90deg ,var(--primary-color), var(--secondary-color));
+    color: var(--light-text);
+}
+
+#header .navbar .navigation{
+    display: flex;
+    gap: 10px;
+    font-size: 1.25rem;
+    font-family: var(--primary-font);
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img{
+    transition: all .2s ease-in-out;
+}
+
+.logo:hover img{
+    transform: rotate(90deg);
+}
+
+.logo h1{
+    font-size: 1.5rem;
+    font-family: var(--primary-font);
+    text-align: center;
+}
+
+.navigation li{
+    padding: 20px;    
+    transition: all .2s ease-in-out;
+    border-radius: 4px;
+}
+
+.navigation li:hover{
+    background: white;
+    color: var(--dark-text);
+    box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+    transform:translateY(-5px);
+}
+
+.navigation li:hover a{
+    color: var(--dark-text);
+}
+
+.navigation li a{
+    color: white;
+}
+
+#main{
+    width: 100vw;
+    /* margin: 0 10vw; */
+    display:flex;
+    align-items: center;
+    background: linear-gradient(90deg ,var(--primary-color), var(--secondary-color));
+}
+
+#main .main-picture{    
+    padding: 50px 10px 50px 0;
+    background: white;
+}
+
+#main .main-picture img{
+    padding:50px 50px 0 10vw ;
+    width: 50vw;
+}
+#main .main-aside{
+    width: 35vw;
+    background: transparent;
+    color: var(--light-text);
+    text-align: right;    
+    padding: 50px 10px 50px 50px;
+}
+
+#main .main-aside h1{
+    font-size: 3rem;
+    font-family: var(--primary-font);
+    font-weight: 700;
+}
+
+#sobre{
+    background: linear-gradient(90deg ,var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sobre .quem-somos{
+    width: 50vw;
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+    font-family: var(--primary-font);
+}
+
+#sobre .quem-somos header h1{
+    font-size: 2.5rem;
+    font-family: var(--primary-font);
+    display: flex;
+    line-height:1;
+}
+
+#sobre .quem-somos header h1::before{
+    display: flex;
+    align-self: center;
+    content: '';
+    width: 100px;
+    height: 2px;
+    margin: 0 20px;
+    background: white;
+    color: white;
+}
+
+#sobre .quem-somos header h1::after{
+    display: flex;
+    align-self: center;
+    content: '';
+    width: 100px;
+    height: 2px;
+    margin: 0 20px;
+    background: white;
+    color: white;
+}
+
+#sobre .quem-somos p{
+    color: var(--light-text);
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+#valores{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 50px 10vw;
+}
+
+#valores .valores-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#valores .valores-card div{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: #eee;
+    border-radius:50px;
+    padding-right: 50px;
+    transition: all .2s ease-in-out;
+}
+
+#valores .valores-card div:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.125);
+}
+
+#valores .valores-card div i{
+    background: linear-gradient(90deg ,var(--primary-color), var(--secondary-color));
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    border-radius: 50%;
+}
+
+#valores .valores-card div h1{
+    font-family: var(--primary-font);
+    color: var(--dark-text);
+}
+
+#valores .valores-card p{
+    width: 80%;
+    margin: 20px 0;
+    text-align: center;
+    font-family: var(--primary-font);
+    color: var(--dark-text);
+}
+
+#footer{
+    background: linear-gradient(90deg ,var(--primary-color), var(--secondary-color));
+    padding: 50px 10vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.redes-sociais{
+    display: flex;
+    gap: 30px;
+}
+
+.redes-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.redes-card div{
+    display: flex;
+    align-items: center;
+    background: #eee;
+    border-radius: 25px;
+    transition: all .2s ease-in-out;
+    width: 200px;
+}
+
+.redes-card div:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2)
+}
+
+.redes-card div p{
+    color: var(--dark-text);
+    padding:0 15px 0 0;
+    margin: auto;
+}
+
+.redes-card i{
+    background: #4ce9b7;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+}
+
+.redes-card p{
+    color: white;
+    font-family: var(--primary-font);
+    line-height:1.5;
+    font-weight: 600;
+}
+
+.redes-sociais::after{
+    content: '';
+    width: 2px;
+    height: 100%;
+    color: white;
+    background: white;
+    display: block;
+    float: right;
+}
+
+.localizacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: var(--primary-font);
+    gap: 20px;
+}
+
+.localizacao div{
+    display: flex;
+    gap: 10px;
+}
+
+.localizacao div h2{
+    text-transform: uppercase;
+    font-size:1rem;
+}
+
+.localizacao .redes i{
+    background: white;
+    width: 30px;
+    height: 30px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
